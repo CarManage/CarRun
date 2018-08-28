@@ -2,6 +2,7 @@ package com.yc.CarRun.biz;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -44,6 +45,11 @@ public class CarsBiz {
 
 	public List<CheXing> selectCars(CheXing chexing) {
 		return cdao.selectCars(chexing.getHomo1(),chexing.getHomo2());
+	}
+
+	public  List<CheXi> selectAllChexi() {
+		
+		return cdao.selectAllchexi();
 	}
 
 	

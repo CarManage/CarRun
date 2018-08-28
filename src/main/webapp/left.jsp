@@ -7,9 +7,9 @@
 				<li><a><img src="images/layout.png" alt="">品牌车型</a>
 						<ul>
 								<!-- <li><a href="pinpai/pinpai.html">品牌管理</a></li> -->
-								<li><a href="product/series.html" target="right">车系管理</a></li>
-								<li><a href="product/car.html" target="right">车型管理</a></li>
-								<li><a href="product/accessory.html" target="right">配件管理</a></li>
+								<li><a href="../product/allSeries.jsp" target="right">车系管理</a></li>
+								<li><a href="../product/car.html" target="right">车型管理</a></li>
+								<li><a href="../product/accessory.html" target="right">配件管理</a></li>
 								
 						</ul>
 				</li>

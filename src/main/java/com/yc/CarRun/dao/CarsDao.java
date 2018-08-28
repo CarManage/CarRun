@@ -1,6 +1,7 @@
 package com.yc.CarRun.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
@@ -33,6 +34,10 @@ public interface CarsDao {
 
 	@Select("select * from tb_chexing where homo1=#{homo1} and homo2=#{homo2}")
 	public List<CheXing> selectCars(@Param("homo1")Integer homo1, @Param("homo2")Integer homo2);
+
+	
+	@Select("select a.*,b.name pname from tb_chexi a,tb_cars b where a.Homo=b.ID")
+	public  List<CheXi> selectAllchexi();
 
 	
 }

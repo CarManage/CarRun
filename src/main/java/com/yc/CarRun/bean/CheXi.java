@@ -13,6 +13,7 @@ public class CheXi {
 	private String baojia2;
 	private Timestamp time;
 	private String createman;
+	private String pname;
 	public Integer getId() {
 		return id;
 	}
@@ -54,6 +55,12 @@ public class CheXi {
 	}
 	public void setCreateman(String createman) {
 		this.createman = createman;
+	}
+	public String getPname() {
+		return pname;
+	}
+	public void setPname(String pname) {
+		this.pname = pname;
 	}
 	
 	

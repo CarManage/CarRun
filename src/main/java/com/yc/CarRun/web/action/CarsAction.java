@@ -62,6 +62,7 @@ public class CarsAction {
 		user.setName("管理员");
 		if(Integer.valueOf(chexi.getBaojia1())>=Integer.valueOf(chexi.getBaojia2())) {
 			model.addAttribute("msg", "报价范围不合理，请重新输入");
+			return "product/series"; 
 		}
 		Timestamp d = new Timestamp(System.currentTimeMillis()); 
 		chexi.setHomo(homo);
@@ -82,6 +83,7 @@ public class CarsAction {
 		user.setName("管理员");
 		if(Integer.valueOf(chexing.getPrice()) < Integer.valueOf(chexi.getBaojia1())  ||   Integer.valueOf(chexing.getPrice()) > Integer.valueOf(chexi.getBaojia2()) ){
 			model.addAttribute("msg", "官方指导价不在报价范围内，请重新输入");
+			return "product/car";
 		}
 		if(!file.isEmpty()) {
 			ServletContext sc=session.getServletContext();
@@ -103,4 +105,14 @@ public class CarsAction {
 		model.addAttribute("Chexing", cbiz.selectCars(chexing));
 		return "product/car";
 	}
+	
+	@RequestMapping("/product/queryAllchexi.do")
+	public String queryAllchexi(Model model) {
+		
+		model.addAttribute("list", cbiz.selectAllChexi());
+		
+		return "product/allSeries";
+		
+	}
+	
 }
